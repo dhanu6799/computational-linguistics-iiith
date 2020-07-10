@@ -32,12 +32,14 @@ function getOption(lang){
     </div>
 </header>
 <div id="selectLanguage" style="text-align:center">
-<select name="lang" autocomplete="off" onchange="getOption(this.value);">
+<select  id="dropdown" name="lang" autocomplete="off" onchange="getOption(this.value);">
 <option value="null">---Select Language---</option>
 <option value="english");'>English</option>
 <option value="hindi");'>Hindi</option>
 </select>
 </div>
-<br/><div align="center" id='words_sentence'></div>
+<br/>
+<div align="center" id='words_sentence'></div>
 </body>
 </html>
+
