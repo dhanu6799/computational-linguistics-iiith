@@ -24,6 +24,29 @@ function getOption(lang){
 	$('#words_sentence').load('CLexp2.php?lang='+lang+'&words_selected=%&words=%&possible_sent=%&turn=0&position=%');
 }
 </script>
+<style>
+p2{
+    color:blue;
+    font-size:20px;
+}
+p3{
+     color:darkblue;
+     font-size:20px;
+     font-style: italic;
+}
+p6{
+     color:blue;
+     font-size:20px;
+     font-style: italic;
+}
+table{
+      margin-left: auto;
+      margin-right:auto;
+}
+p{
+   font-size:25px;
+}
+</style>
 </head>
 <body>
 	<header>
@@ -34,10 +57,31 @@ function getOption(lang){
 <div id="selectLanguage" style="text-align:center">
 <select  id="dropdown" name="lang" autocomplete="off" onchange="getOption(this.value);">
 <option value="null">---Select Language---</option>
-<option value="english");'>English</option>
-<option value="hindi");'>Hindi</option>
-</select>
-</div><br/>
+<option value="english">English</option>
+<option value="hindi">Hindi</option>
+</select></center><br><br>
+<center><p1 id="dis_sen"></p1></center><br>
+<center><p2 id="dis_sub"></p2></center><br>
+<table>
+<tr>
+<td id="0" onclick="print(0)"</td> 
+<td id="1" onclick="print(1)"></td>
+<td id="2" onclick="print(2)"></td>
+<td id="3" onclick="print(3)"></td>
+<td id="4" onclick="print(4)"></td>
+<td id="5" onclick="print(5)"></td>
+<td id="6" onclick="print(6)"></td>
+<td id="7" onclick="print(7)"></td>
+<td id="8" onclick="print(8)"></td>
+<td id="9" onclick="print(9)"></td>
+</tr>
+</table><br>
+<center><p3 id="dis_sen1"></p3>
+	<p6 id="sen2"</p6></center><br>
+<center><b><p id="p4"></p></b></center>
+<center><p7 id="Reform"></p7></center>
+</body>
+</html>
 <div  align="center" id='words_sentence'></div>
 </body>
 </html>
