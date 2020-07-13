@@ -102,4 +102,17 @@ document.getElementById("p4").innerHTML+=a+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbs
  document.getElementById("dis_sen1").innerHTML= "Formed Sentence";
 document.getElementById("sen2").innerHTML= "(After selecting words)";
 document.getElementById("Reform").innerHTML= "<button>"+"Re-form the sentence"+"</button>";
+} 
+function reformed() {
+document.getElementById("dis_sen1").innerHTML=" "
+document.getElementById("sen2").innerHTML=" "
+document.getElementById("Reform").innerHTML=" "
+document.getElementById("p4").innerHTML=" ";
+for(var i=0;i<10;i++){
+  var a=document.getElementById(i).value
+ if(a!=undefined){
+document.getElementById(i).innerHTML="<button>"+a+"</button>"
+document.getElementById("p4").innerHTML=" ";
+}
+}
 }
