@@ -145,27 +145,6 @@ function display()
  document.getElementById("dis_sub").innerHTML = "(Select the buttons in proper order)"
  }
 }
-function print(i){
-var a=document.getElementById(i).value;
-document.getElementById("p4").innerHTML+=a+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp"+"&nbsp";
-  document.getElementById(i).innerHTML=" ";
- document.getElementById("dis_sen1").innerHTML= "Formed Sentence";
-document.getElementById("sen2").innerHTML= "(After selecting words)";
-document.getElementById("Reform").innerHTML= "<button>"+"Re-form the sentence"+"</button>";
-} 
-function reformed() {
-document.getElementById("dis_sen1").innerHTML=" "
-document.getElementById("sen2").innerHTML=" "
-document.getElementById("Reform").innerHTML=" "
-document.getElementById("p4").innerHTML=" ";
-for(var i=0;i<10;i++){
-  var a=document.getElementById(i).value
- if(a!=undefined){
-document.getElementById(i).innerHTML="<button>"+a+"</button>"
-document.getElementById("p4").innerHTML=" ";
-}
-}
-}
 
 var words_sentence = "";
 var formed_sentence = "";
@@ -249,4 +228,26 @@ function check() {
 		document.getElementById("wrong").style.display = "initial";
 	}
 }
+function display(style) {
+	document.getElementById("display").style.display = style;
+	document.getElementById("icons").style.display = style;
+	document.getElementById("display2").style.display = style;
+	document.getElementById("formed_sentence").style.display = style;
+	document.getElementById("reform_button").style.display = style;
+	document.getElementById("check").style.display = style;
+	document.getElementById("correct").style.display = style;
+	document.getElementById("right").style.display = style;
+	document.getElementById("wrong").style.display = style;
+	document.getElementById("words_sentence").style.display = style;
+}
 
+function clr() {
+	document.getElementById("formed").innerHTML = "";
+	document.getElementById("display2").innerHTML = "";
+	document.getElementById("reform_button").style.display = "none";
+	document.getElementById("check").style.display = "none";
+	document.getElementById("correct").style.display = "none";
+	document.getElementById("right").style.display = "none";
+	document.getElementById("wrong").style.display = "none";
+	document.getElementById("words_sentence").style.display = "none";
+}
