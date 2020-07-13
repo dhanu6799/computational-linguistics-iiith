@@ -116,3 +116,87 @@ document.getElementById("p4").innerHTML=" ";
 }
 }
 }
+
+var words_sentence = "";
+var formed_sentence = "";
+var count = 0;
+var random = 0;
+var length = 0;
+var text = "";
+var jumbled_sentence = "";
+var lang = "";
+var a;
+var n;
+var newline;
+
+function jumble(line) {
+	text = line.split(" "), length = text.length;
+	var temp, i, index = length - 1;
+	do {
+		i = Math.floor(Math.random() * length);
+		temp = text[i];
+		text[i] = text[index];
+		text[index] = temp;
+		index--;
+	} while (index !== 0);
+	jumbled_sentence = text;
+	buttons(text);
+}
+
+function reform() {
+	clr();
+	document.getElementById("icons").innerHTML = "";
+	buttons(jumbled_sentence);
+}
+function correct() {
+	document.getElementById("word_sentence").style.display = "initial";
+	var correct = document.getElementById("correct").innerHTML;
+	if (correct === "Get Correct Sentence" || correct === "Get Answers") {
+		document.getElementById("correct").innerHTML = "Hide the correct Sentence";
+		if (lang === "english") {
+			for (a in english[random]) {
+				n = document.createTextNode(english[random][a]);
+				document.getElementById("words_sentence").appendChild(n);
+				newline = document.createElement("br");
+				document.getElementById("words_sentence").appendChild(newline);
+			}
+			return;
+		} else {
+			for (a in hindi[random]) {
+				n = document.createTextNode(hindi[random][a]);
+				document.getElementById("words_sentence").appendChild(n);
+				newline = document.createElement("br");
+				document.getElementById("words_sentence").appendChild(newline);
+			}
+			return;
+		}
+	} else {
+		document.getElementById("correct").innerHTML = "Get Answers";
+		document.getElementById("words_sentence").innerHTML = "";
+	}
+}
+function check() {
+	var check = false;
+	document.getElementById("correct").style.display = "initial";
+	if (lang === "english") {
+		for (a in english[random]) {
+			if (english[random][a] === formed_sentence) {
+				check = true;
+				break;
+			}
+		}
+	} else if (lang === "hindi") {
+		for (a in hindi[random]) {
+			if (hindi[random][a] === formed_sentence) {
+				check = true;
+				break;
+			}
+		}
+	}
+	if (check === true) {
+		document.getElementById("right").style.display = "initial";
+	} else {
+		document.getElementById("wrong").style.display = "initial";
+	}
+}
+

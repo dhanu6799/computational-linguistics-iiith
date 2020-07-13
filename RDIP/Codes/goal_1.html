@@ -79,7 +79,18 @@ p{
 <center><p3 id="dis_sen1"></p3>
 	<p6 id="sen2"</p6></center><br>
 <center><b><p id="p4"></p></b></center>
-<center><p7 id="Reform" onclick="reformed()"></p7></center>
+<center><p7 button id="Reform" onclick="reformed()" style="display:none"></p7></button></center>
+  <button id="check-correctness" style="display: none;">Check the correctness of this sentence</button>
+  <br>
+
+	<p id="right" style="display:none;">Right answer!!!</p>
+	<p id="wrong" style="display:none;">Wrong answer!!!</p>
+	
+	<br>
+	<br>
+<button id="correct" onclick="correct()" style="display:none;">Get Correct Sentence</button>
+		<br>
+	
 </body>
 </html>
 <div  align="center" id='words_sentence'></div>
