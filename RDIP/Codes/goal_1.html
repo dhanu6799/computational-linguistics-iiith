@@ -14,15 +14,6 @@
 
 
 <script type="text/javascript" src='jquery.js'></script>
-<script type="text/javascript">
-function getOption(lang){
-	if(lang=="null")
-	{
-		alert("Select language");
-		return;
-	}
-	$('#words_sentence').load('CLexp2.php?lang='+lang+'&words_selected=%&words=%&possible_sent=%&turn=0&position=%');
-}
 </script>
 <style>
 p2{
@@ -55,7 +46,7 @@ p{
     </div>
 </header>
 <div id="selectLanguage" style="text-align:center">
-<select  id="dropdown" name="lang" autocomplete="off" onchange="getOption(this.value);">
+<select  id="dropdown" onchange="select()" name="lang" autocomplete="off">
 <option value="null">---Select Language---</option>
 <option value="english">English</option>
 <option value="hindi">Hindi</option>
