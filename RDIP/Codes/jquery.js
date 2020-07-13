@@ -77,13 +77,63 @@ for(var j=d;j<10;j++){
 }
 }
 function select() {
-  lang = document.getElementById("dropdown").value;
-	if (lang === "hindi") {
+	clr();
+	lang = document.getElementById("dropdown").value;
+	if (lang === "english" || lang === "hindi") {
 		document.getElementById("display").innerHTML = "<b>Form a sentence(Declarative or Interrogative or any other type) from the given words</b>" + "<br>" + "<i>(select the buttons in proper order)</i>";
-	} else if (lang === "english") {
-		document.getElementById("display").innerHTML = "<b>Form a sentence(Declarative or Interrogative or any other type) from the given words</b>" + "<br>" + "<i>(select the buttons in proper order)</i>";
+		select_sentence(lang);
 	} else {
 		alert("Select language");
+		return false;
+	}
+}
+
+function select_sentence(lang) {
+	document.getElementById("icons").innerHTML = "";
+	if (lang === "english") {
+		random = Math.floor(Math.random() * 10);
+		var eng = english[random][0];
+		jumble(eng);
+	} else if (lang === "hindi") {
+		random = Math.floor(Math.random() * 7);
+		var hin = hindi[random][0];
+		jumble(hin);
+	}
+}
+function buttons(text) {
+	for (var j = 0; j < length; j++) {
+		var button = document.createElement("Button");
+		button.setAttribute("id", j.toString());
+		button.setAttribute("class", "words");
+		button.setAttribute("value", text[j]);
+		button.innerHTML = text[j];
+		document.getElementById("icons").append(button);
+		count = 0;
+	}
+}
+
+function display2(id) {
+	if (id === "icons") {
+		return;
+	}
+	document.getElementById("display2").innerHTML = "<b>Formed Sentence </b>" + "<i>(after selecting words):</i>";
+}
+
+function press(id) {
+	if (id === "icons") {
+		return;
+	}
+	if (count === 0) {
+		document.getElementById("formed").innerHTML = String(document.getElementById(id).value);
+		document.getElementById("reform_button").style.display = "initial";
+	} else {
+		document.getElementById("formed").innerHTML = String(document.getElementById("formed").innerHTML) + " " + String(document.getElementById(id).value);
+	}
+	formed_sentence = document.getElementById("formed").innerHTML;
+	document.getElementById(id).style.display = "none";
+	count += 1;
+	if (count == length) {
+		document.getElementById("check").style.display = "initial";
 	}
 }
 function display()
