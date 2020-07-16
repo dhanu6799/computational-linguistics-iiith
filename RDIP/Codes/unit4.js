@@ -286,3 +286,11 @@ function checkAns() {
         }
     }
 }
+function rootWord() {
+    document.getElementById("disAns").innerHTML = ""
+    $("#sub").hide()
+    $("#cont").hide()
+    $("#lst").show()
+    $("#sub1").show()
+    document.getElementById("msg").innerText = "Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
+}
