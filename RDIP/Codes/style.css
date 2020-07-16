@@ -38,3 +38,132 @@ border-radius : 4px;
 border : 1px solid black;
 color : black;
 }
+#choose-corpus {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 8px;
+    /* width: 230px; */
+    font-size: 20px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#f1{
+
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 21px;
+    text-align: justify;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 8px;
+
+}
+
+#f2{
+
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 22px;
+    text-align: center;
+    padding: 8px;
+
+}
+
+#table{
+    border-collapse: collapse;
+    font-size: 22px;
+    margin: 0 auto;
+
+}
+
+#table tr td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 23px;
+}
+
+.inp{
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    font-size: 22px;
+}
+
+#sub{
+    margin: 50px auto;
+    padding: 8px 30px;
+    position: absolute;
+    left: 46%;
+    font-size: 19px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+ #cont{
+    margin-top: 45px;
+    padding: 6px 30px;
+    position: absolute;
+    left: 46%;
+    font-size: 19px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+#disAns{
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 28px;
+    margin-top: 100px;
+    text-align: center;
+    padding: 8px;
+}
+
+ #msg{
+
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 22px;
+    text-align: center;
+}
+
+#lst{
+
+    width: 150px;
+    margin: 25px auto;
+}
+
+label{
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 8px;
+}
+
+#newtypes{
+    width: 50px;
+    padding: 5px 15px;
+    margin-left: 23%;
+    text-align: center;
+    font-size: 22px;
+}
+
+#sub1{
+
+    margin-top: 30px;
+    padding: 4px 3px;
+    position: absolute;
+    left: 48%;
+    font-size: 19px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+#finalMsg{
+
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 28px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    text-align: center;
+    padding: 8px;
+}
