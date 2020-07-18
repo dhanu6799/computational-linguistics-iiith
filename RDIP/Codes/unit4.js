@@ -447,3 +447,20 @@ function againCheckTypes() {
         }
         
     }
+    function compairFinalAns(){
+    document.getElementById("finalMsg").innerHTML = "Right Answer"
+    document.getElementById("finalMsg").style.color = "green"
+    }
+}
+
+
+/*
+#token and types answer
+corpus 1 : 169(tokens) 80(types)
+corpus 1 : 111(tokens) 65(types)
+corpus 1 : 219(tokens) 95(types)
+#newtypes answer : 
+corpus 1 : 73
+corpus 2 : 56
+corpus 3 : 84
+*
