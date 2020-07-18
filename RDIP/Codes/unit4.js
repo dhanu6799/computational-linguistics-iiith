@@ -304,3 +304,7 @@ function rootWord() {
     $("sub1").show()
     document.getElementById("msg").innerText = "Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
 }
+//checking Unique words for new corpus tokens
+function uniqueWordForStemmedCorpus(word, position, self) { 
+    return self.indexOf(word) === position;
+}
