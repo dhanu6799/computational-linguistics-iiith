@@ -422,3 +422,28 @@ function againCheckTypes() {
             stemmer.stem();
             types.push(stemmer.getCurrent());
             }}
+         let finalTypes = types.filter(uniqueWordForStemmedCorpus);
+
+        // validating input field to that it takes only numeric value
+        
+        var k = /^[0-9]+$/
+        if(document.getElementById("newtypes").value=="")
+        {
+            alert("Enter number of new types")
+        }
+        
+        else if ( (!document.getElementById("newtypes").value.match(k) ))
+        {
+            alert("please enter numeric value only.")
+        }
+
+        if(document.getElementById("newtypes").value == finalTypes.length){
+            document.getElementById("newtypes").style.background = "green"
+            compairFinalAns()
+        }else{
+            document.getElementById("newtypes").style.background = "red"
+            document.getElementById("finalMsg").innerHTML = "Wrong Answer"
+            document.getElementById("finalMsg").style.color = "red"
+        }
+        
+    }
