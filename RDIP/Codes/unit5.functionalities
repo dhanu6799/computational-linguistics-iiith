@@ -1,0 +1,30 @@
+1. Index.html page contains js, jquery that linked this page to the other pages.
+2. When clicked on the INTRODUCTION, it is redirecting to the Introduction.html page.This page contains basic information about the experiment.
+3. When clicked on THEORY, it is redirecting to the Theory.html page. This page contains JS plugin's, Bootstrap core javaScript and basic information about what is part of speech.
+4. When clicked on OBJECTIVE, it is redirecting to the Objective.html page. This the page contains information and the objective of this experiment.
+5.  When clicked on EXPERIMENT then ,
+(a) Dropdown select language appeared. It has two option English and Hindi.
+(b) Another dropdown is appear when choose language asking to select a sentence.
+(c) when select any sentence either hindi or english then sentence is appear in the form of table.
+      it has two column,and asking for selecting POS.
+     (i) LEXICON  
+    (ii) POS
+(d) On clicking Submit Button, Get answer button is appear
+     another column appear
+ if the field has wrong answer then,
+   (1) shows wrong ans in red color. 
+if  the fields has right answers then,
+     (1) shows right ans in red color.			
+(6) When clicked on Get Answer ,
+   (a) Shows all the right answer in a new column.		
+   (b)  Get Answer converted into Hide Answer			
+(7) When clicked on Hide Answer button,
+  (a) Hides the right answer column .		
+   (b) Hide Answer converted into Get Answer
+
+
+ Missing Functionality which should be added in this lab.
+
+1. When clicked on QUIZZES link and when we are inside the QUIZZES page their functionality is missing to choose the correct option in the given question.
+2. The footer part is missing in the pages.
+3. When clicked on IIIT-H it should be redirected to the official page of IIITH.
