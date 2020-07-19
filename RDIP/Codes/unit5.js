@@ -113,3 +113,25 @@ function selectSentence(){
 
 }
 
+let createRowsInTable = ""
+let splitSen = ""
+function showValueInTable(sentence){
+    document.getElementById("tbl").innerHTML = " "
+    splitSen = sentence.split(" ")
+    if(selectLng.value === "eng")
+	{	createRowsInTable = ""
+		for(i = 0 ; i<splitSen.length ; i++){
+            // added dropdown consiting of 9 POS tags for english
+           createRowsInTable += "<tr><td>"+splitSen[i]+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Determiner'>Determiner</option><option value = 'Preposition'>Preposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td></td></tr>";
+		}
+	}
+	else if(selectLng.value === "hnd")
+	{	createRowsInTable = ""
+		for(i = 0 ; i<splitSen.length ; i++){
+            // added dropdown consiting of 8 POS tags for hindi
+            createRowsInTable += "<tr><td>"+splitSen[i]+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Postposition'>Postposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td></td></tr>";
+		}
+	}
+    document.getElementById("tbl").innerHTML = "<tr><th>LEXICON</th><th>POS</th><th></th><th></th></tr><tr></td></tr>" + createRowsInTable
+
+}
