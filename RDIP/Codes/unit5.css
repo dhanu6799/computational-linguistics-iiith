@@ -1,0 +1,75 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Verdana,Tahoma, sans-serif;
+}
+
+/* heading styling */
+h1 {
+    margin: 50px 100px;
+    font-family: Helvetica ;
+    font-weight:500;
+}
+
+#choose-lang {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 8px;
+    /* width: 230px; */
+    font-size: 20px;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sec {
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 8px;
+    /* width: 230px; */
+    font-size: 20px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#msg{
+    margin-top: 130px;
+    font-family: Verdana,Tahoma, sans-serif;
+    font-size: 21px;
+    text-align: center;
+    font-style: italic;
+    color: blue;
+
+}
+
+#tbl{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+th,td{
+    border:1px solid black;
+    padding:8px;
+    font-size: 24px;
+}
+th{
+    color:rgb(158, 93, 93)
+}
+td select{
+    font-size: 21px;
+}
+
+#sub{
+    margin: 50px auto;
+    margin-bottom: 35px;
+    padding: 8px 35px; 
+    position: absolute;
+    left: 46%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}

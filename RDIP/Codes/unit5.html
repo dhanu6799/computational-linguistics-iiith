@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 5</title>
+    <link rel="stylesheet" href="../css/Unit5.css">
+    <script src="../../Libraries/jquery-3.5.1.js"></script>
+</head>
+<body>
+     <!-- heading -->
+     <h1>Experiment</h1>
+
+     <select id="choose-lang" onchange="selectLanguage();">
+        <option value="default">---Select Language---</option>
+        <option value="eng">English</option>
+        <option value="hnd">Hindi</option>
+    </select>
+
+    <select id="english" class="sec" onchange="selectSentence();">
+        <option value="default">---Select a sentence---</option>
+        <option value="firstEng">The child liked the chocolate.</option>
+        <option value="secondEng">She was stopped by the bravest knight.</option>
+        <option value="thirdEng">Mary baked a cake for his birthday.</option>
+        <option value="fourthEng">She decorated the cake carefully.</option>
+        <option value="fifthEng">Mary wore a dress with polka dots.</option>
+    </select>
+    <select id="hindi" class="sec" onchange="selectSentence();">
+        <option value="default">---Select a sentence---</option>
+        <option value="firstHnd">राम ने सीता के लिए फल तोड़ा।</option>
+        <option value="secondHnd">छोटे बच्चे पाठशाला जल्दी आयेंगे।</option>
+        <option value="thirdHnd">मेहनत का फल मीठा होता है।</option>
+        <option value="fourthHnd">वाह! वह खूबसूरत है।</option>
+        <option value="fifthHnd">पेड़ से पत्ते गिर गए।</option>
+    </select>
+  
+    <p id="msg"></p>
+    <table id="tbl">
+
+    </table>
+    <button id="sub">Submit</button>
+
+    <script src="../js/Unit5.js"></script>
+</body>
+</html>
