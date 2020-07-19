@@ -48,3 +48,68 @@ function selectLanguage() {
         document.getElementById("hindi").value = "default"
     }
 }
+function selectSentence(){
+    document.getElementById("msg").innerHTML = "Select the POS tag for corresponding words"
+    $("sub").show()
+    if(selectLng.value === "eng"){
+        let engSent = document.getElementById("english").value
+        if(engSent == "firstEng"){
+            showValueInTable(englishSentences[0])
+            
+        }
+        if(engSent == "secondEng"){
+            showValueInTable(englishSentences[1])
+           
+        }
+        if(engSent == "thirdEng"){
+            showValueInTable(englishSentences[2])
+            
+        }
+        if(engSent == "fourthEng"){
+            showValueInTable(englishSentences[3])
+           
+        }
+        if(engSent == "fifthEng"){
+            showValueInTable(englishSentences[4])
+           
+        }
+        if(engSent =="default"){
+            alert("Select a sentence")
+            $("sub").hide()
+            document.getElementById("msg").innerHTML = ""
+            document.getElementById("tbl").innerHTML = ""
+        }
+    }
+    else if(selectLng.value === "hnd"){
+
+        let hndSent = document.getElementById("hindi").value
+        if(hndSent == "firstHnd"){
+            showValueInTable(hindiSentences[0])
+           
+        }
+        if(hndSent == "secondHnd"){
+            showValueInTable(hindiSentences[1])
+           
+        }
+        if(hndSent == "thirdHnd"){
+            showValueInTable(hindiSentences[2])
+            
+        }
+        if(hndSent == "fourthHnd"){
+            showValueInTable(hindiSentences[3])
+           
+        }
+        if(hndSent == "fifthHnd"){
+            showValueInTable(hindiSentences[4])
+          
+        }
+        if(hndSent =="default"){
+            alert("Select a sentence")
+            $("sub").hide()
+            document.getElementById("msg").innerHTML = ""
+            document.getElementById("tbl").innerHTML = " "
+        }
+    }
+
+}
+
