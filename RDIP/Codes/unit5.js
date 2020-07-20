@@ -11,6 +11,19 @@ let hindiSentences = ["राम ने सीता के लिए फल त
                       "वाह! वह खूबसूरत है।",
                       "पेड़ से पत्ते गिर गए।"
                      ]
+var pos = require('pos');
+var words = new pos.Lexer().lex('This is some sample text. This text can contain multiple sentences.'); 
+var tagger = new pos.Tagger();
+var taggedWords = tagger.tag(words);
+for (i in taggedWords) {
+    var taggedWord = taggedWords[i];
+    var word = taggedWord[0];
+    var tag = taggedWord[1];
+    console.log(word + " /" + tag);
+}
+
+
+
 $("english").hide()
 $("hindi").hide()
 $("sub").hide()
@@ -135,3 +148,6 @@ function showValueInTable(sentence){
     document.getElementById("tbl").innerHTML = "<tr><th>LEXICON</th><th>POS</th><th></th><th></th></tr><tr></td></tr>" + createRowsInTable
 
 }
+window.selectLanguage = selectLanguage
+window.selectSentence = selectSentence
+window.showValueInTable = showValueInTable
