@@ -165,6 +165,42 @@ function showValueInTable(sentence){
     document.getElementById("tbl").innerHTML = "<tr><th>LEXICON</th><th>POS</th><th></th><th></th></tr><tr></td></tr>" + createRowsInTable 
     
 }
+function submitButton(sentence){
+    document.getElementById("tbl").innerHTML = " "
+    if(selectLng.value === "eng")
+    {	createRowsInTable = ""
+            var words = new pos.Lexer().lex(sentence); 
+            var tagger = new pos.Tagger();
+            var taggedWords = tagger.tag(words);
+            for (i in taggedWords) {
+                var taggedWord = taggedWords[i];
+                var word = taggedWord[0];
+                var tag = taggedWord[1];
+                console.log(word + " /" + tag);
+                if(tag=="NN" || tag=="NNP" || tag=="NNS"){
+                    tag="Noun";
+                }
+                else if(tag=="VBN" || tag=="VBD"){
+                    tag="Verb";
+                }
+                else if(tag=="JJ" || tag=="JJS"){
+                    tag="Adjective";
+                }
+                else if(tag=="PRP" || tag=="PRP$"){
+                    tag="Pronoun";
+                }
+                else if(tag=="IN"){
+                    tag="Preposition";
+                }
+                else if(tag=="RB"){
+                    tag="Adverb";
+                }
+                else if(tag=="DT"){
+                    tag="Determiner";
+                }
+                createRowsInTable += "<tr><td>"+word+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Determiner'>Determiner</option><option value = 'Preposition'>Preposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td>"+tag+"</td></tr>";
+            }}
+}
 window.selectLanguage = selectLanguage
 window.selectSentence = selectSentence
 window.showValueInTable = showValueInTable
