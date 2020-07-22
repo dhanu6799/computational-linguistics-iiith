@@ -73,3 +73,13 @@ td select{
     transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 }
+#ans{
+    margin: 55px auto;
+    /* margin-bottom: 30px; */
+    padding: 8px 30px; 
+    position: absolute;
+    left: 46%;
+    font-size: 19px;
+    transform: translateY(100%);
+    -ms-transform: translateY(-30%);
+}
