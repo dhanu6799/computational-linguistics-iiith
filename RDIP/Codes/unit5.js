@@ -201,6 +201,41 @@ function submitButton(sentence){
                 createRowsInTable += "<tr><td>"+word+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Determiner'>Determiner</option><option value = 'Preposition'>Preposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td>"+tag+"</td></tr>";
             }}
 }
+ document.getElementById("ans").onclick = function(){
+            createRowsInTable = ""
+            for (i in taggedWords) {
+                var taggedWord = taggedWords[i];
+                var word = taggedWord[0];
+                var tag = taggedWord[1];
+                console.log(word + " /" + tag);
+            if(word=="राम" || word=="सीता" || word=="फल" || word=="बच्चे" || word=="पाठशाला" || word=="मेहनत" || word=="पेड़" || word=="पत्ते"){
+                tag="Noun"
+            }
+            else if(word=="ने" || word=="के" || word=="लिए" || word=="का" || word=="से"){
+                tag="Postposition"
+            }
+            else if(word=="तोड़ा" || word=="आयेंगे" || word=="होता" || word=="है" || word=="गिर" || word=="गए"){
+                tag="Verb"
+            }
+            else if(word=="छोटे" || word=="मीठा" || word=="खूबसूरत"){
+                tag="Adjective"
+            }
+            else if(word=="जल्दी"){
+                tag="Adverb"
+            }
+            else if(word=="वाह"){
+                tag="Interjection"
+            }
+            else if(word=="वह"){
+                tag="Pronoun"
+            }
+            createRowsInTable += "<tr><td>"+word+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Postposition'>Postposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td>"+tag+"</td></tr>";
+        }document.getElementById("tbl").innerHTML = "<tr><th>LEXICON</th><th>POS</th><th></th><th>Answers</th></tr><tr></td></tr>" + createRowsInTable 
+        }
+        createRowsInTable += "<tr><td>"+word+"</td><td><select><option value = 'Noun'>Noun</option><option value = 'Pronoun'>Pronoun</option><option value = 'Verb'>Verb</option><option value = 'Adjective'>Adjective</option><option value = 'Adverb'>Adverb</option><option value = 'Postposition'>Postposition</option><option value = 'Conjunction'>Conjunction</option><option value = 'Interjection'>Interjection</option></select></td><td></td><td></td></tr>";
+        }
+	}
+    document.getElementById("tbl").innerHTML = "<tr><th>LEXICON</th><th>POS</th><th></th><th></th></tr><tr></td></tr>" + createRowsInTable 
 window.selectLanguage = selectLanguage
 window.selectSentence = selectSentence
 window.showValueInTable = showValueInTable
