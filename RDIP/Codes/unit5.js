@@ -280,4 +280,5 @@ function furtherreadingsshow(){
 	subheading.innerHTML = "Further Reading";
 	document.getElementById('image1').style.display = "none";
 	description.innerHTML = "<center><b>Hindi</b><br>-Yamuna Kachru<br><i>Chapter 6</i><br><br><b>A Student's Introduction To English Grammar</b><br>- Rodney D. Huddleston<br><i>Chapter 6</i></center>"
+
 }
